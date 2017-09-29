@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cruz.yellowpages.Activities.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="Páginas Amarillas"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:drawableStart="@drawable/ic_topbar"
+                android:layout_marginStart="70dp"
+                android:drawablePadding="-40dp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/topBar"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="6dp"
+        app:cardElevation="8dp"
+        android:id="@+id/cardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QUÉ BUSCA:"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_buscar"
+                android:layout_marginStart="10dp"
+                />
+
+            <ImageButton
+                style="@android:style/Widget.Holo.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="buscarlocal"
+                android:src="@android:drawable/ic_menu_search"
+                android:visibility="visible" />
+
+        </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DONDE BUSCA:"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ciudades"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/black"
+                    android:drawableStart="@android:drawable/ic_menu_mapmode"
+                    />
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cerca de mí"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/black"
+                    android:drawableStart="@android:drawable/ic_dialog_map"
+                    />
+
+            </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Usted está ubicado en: Lima, Perú "
+                    android:gravity="bottom"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="25dp"
+                    android:drawableLeft="@android:drawable/ic_menu_myplaces"
+                    android:paddingBottom="8dp"
+                    />
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/primer_recycle"
+        android:layout_alignStart="@+id/cardView"
+        android:layout_below="@+id/cardView"
+        android:layout_above="@+id/bottom_navigation"
+        />
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@android:color/black"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/bottom" />
+
+</RelativeLayout>

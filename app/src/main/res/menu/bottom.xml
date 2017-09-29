@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:title="Buscar"
+        android:icon="@android:drawable/ic_menu_search" />
+
+    <item
+        android:id="@+id/menu_camera"
+        android:title="Ubicacion"
+        android:icon="@android:drawable/ic_dialog_map" />
+
+    <item
+        android:id="@+id/menu_search"
+        android:title="Ajustes"
+        android:icon="@android:drawable/ic_menu_manage"
+        />
+
+    <item
+        android:id="@+id/menu_more"
+        android:title="More"
+        android:icon="@android:drawable/ic_menu_more" />
+
+</menu>
